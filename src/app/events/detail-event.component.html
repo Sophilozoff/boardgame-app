@@ -1,0 +1,33 @@
+<div *ngIf="event" class="row">
+    <div class="col s12 m8 offset-m2">
+        <h2 class="header center">{{ event.name }}</h2>
+        <div class="card horizontal hoverable">
+
+            <div class="card-stacked">
+                <div class="card-content center">
+                        <h4 >{{event.title}}</h4>
+                        <p>Le {{event.date}} à {{ event.hour }}</p>
+                    <table class="bordered striped">
+                        <tbody>
+                            <tr>
+                                <td>{{ event.description }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Participants</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-action">
+                    <a href="" (click)="goBack()" class="waves-effect waves-light btn">Retour</a>
+                    <a (click)="goEdit(event)" class="waves-effect waves-light btn">Editer</a>
+                    <a (click)="delete(event)">Supprimer</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

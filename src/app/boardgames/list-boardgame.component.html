@@ -1,0 +1,24 @@
+<!-- champ de recherche -->
+<search-boardgame></search-boardgame>
+
+<!-- liste de jeux -->
+<div *ngFor="let boardgame of boardgames">
+        <!-- Card -->
+        <div class="row valign-wrapper card left-align">
+                <img class="col s5 m4 l2 activator img-ludotheque" (click)="selectBoardgame(boardgame)" src="{{boardgame.image}}">
+                <div class="col s5 m6 l7">
+                        <p class="card-title activator grey-text text-darken-4">{{boardgame.name}}</p>
+                        <!-- Nb de joueurs -->
+                        <p class="valign-wrapper"><i class="material-icons">group</i>&nbsp; {{boardgame.playersMin}} à
+                                {{boardgame.playersMax}} joueurs</p>
+                        <!-- Durée -->
+                        <p class="valign-wrapper"><i class="material-icons">timer</i>&nbsp; Durée :
+                                {{boardgame.averageTime}} minutes</p>
+                </div>
+                <div class="center">
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i
+                                        class="material-icons">add</i></a>
+                        <p>Ajouter à la liste</p>
+                </div>
+        </div>
+</div>

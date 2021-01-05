@@ -1,0 +1,64 @@
+<form *ngIf="event" (ngSubmit)="onSubmit()">
+
+    <div class="container">
+        <h4>Modifier l'évènement </h4>
+        <br>
+        <!-- Event title -->
+        <div class="input-field col s6 form-group">
+            <input class="validate form-control"
+            required
+            name="title"
+            type="text"
+            value="{{event.title}}"
+            #eventTitle>
+        </div>
+
+        <!-- Event date and hour -->
+        <div class="form-group">
+            <label>Date :</label>
+            <input type="text" class="dategamepicker" #date value="{{event.date}}">
+            <label>Heure :</label>
+            <input type="text" class="timepicker" #hour value="{{event.hour}}">
+        </div>
+
+        <!-- Event location -->
+        <div class="input-field col s12">
+            <select #place>
+                <option value="{{ event.place}}" disabled selected></option>
+                <option value="A la maison">A la maison</option>
+                <option value="Le nid">Le nid</option>
+                <option value="La revanche">La revanche</option>
+                <option value="Café Meisia">Café Meisia</option>
+            </select>
+        </div>
+
+        <!-- Event max players -->
+        <div class="input-field col s12">
+            <select #nbMaxOfPlayers>
+                <option value="{{ event.nbMaxOfPlayers}}" disabled selected></option>
+                <option [ngValue]="1">1</option>
+                <option [ngValue]="2">2</option>
+                <option [ngValue]="3">3</option>
+                <option [ngValue]="4">4</option>
+                <option [ngValue]="5">5</option>
+                <option [ngValue]="6">6</option>
+                <option [ngValue]="7">7</option>
+                <option [ngValue]="8">8</option>
+            </select>
+        </div>
+
+        <!-- Event description -->
+        <div class="input-field col s12 form-group">
+            <textarea #description class="materialize-textarea">{{ event.description}}</textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+            class="btn waves-effect waves-light">Editer
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</form>
+<h4 *ngIf='!event' class="center">
+    <p>Pas d'évènement</p>
+</h4>

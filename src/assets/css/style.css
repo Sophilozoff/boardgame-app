@@ -1,0 +1,39 @@
+/* FONTS */
+@font-face {
+    font-family: "Good Morning";
+    src: url("../fonts/GoodMorning.ttf");
+}
+@font-face {
+    font-family: "Quicksand Regular";
+    src: url("../fonts/Quicksand-Regular.ttf");
+}
+@font-face {
+    font-family: "RedHatDisplay Regular";
+    src: url("../fonts/RedHatDisplay-Regular.ttf");
+}
+#background-body{
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+}
+
+/* header */
+#title{
+    margin: auto;
+    font-size: 3.7em;
+    font-family: "Good Morning";
+    margin: 50px;
+}
+.nav-extended{
+    position: sticky;
+}
+
+/* event form */
+#formEvent{
+    padding-bottom: 100px;
+}
+/* media queries */
+@media screen and (max-width: 840px) {
+    #container-body, nav {
+        width: 100%;
+    }
+}

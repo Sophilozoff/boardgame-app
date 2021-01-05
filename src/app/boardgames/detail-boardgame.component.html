@@ -1,0 +1,7 @@
+<div *ngIf="boardgame">
+
+    <p>{{ boardgame.name }}</p>
+    <a (click)="goBack()">Retour</a>
+</div>
+<h4 *ngIf='!boardgame'>Aucun jeu de société à afficher</h4>
+

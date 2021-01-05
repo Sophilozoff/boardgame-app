@@ -1,0 +1,10 @@
+.img-ludotheque{
+    height : 170px;
+}
+.card{
+    padding: 20px;
+}
+.card-title{
+    font-size: 1.1em;
+    font-weight: bold;
+}

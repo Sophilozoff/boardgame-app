@@ -1,0 +1,28 @@
+<!-- liste de jeux -->
+<div class="container-fluid">
+        <div class="card #00897b teal darken-2">
+                <h3 class="grey-text text-lighten-5">Les évènements à venir...</h3>
+                <hr>
+                <div *ngFor="let event of events">
+                        <!-- Card -->
+                        <div class="row valign-wrapper card left-align">
+                                <div (click)="selectEvent(event)" class="col s4">
+                                        <p class="card-title activator grey-text text-darken-4">{{event.title}}</p>
+                                        <p>Le {{ event.date }} à {{ event.hour }}</p>
+                                        <p>Où : {{ event.place }}</p>
+                                        <!-- Nb de joueurs -->
+                                        <p class="valign-wrapper"><i class="material-icons">group</i>&nbsp;
+                                                {{ event.nbMaxOfPlayers }} joueurs maximum</p>
+                                </div>
+                                <div (click)="selectEvent(event)" class="col s7">
+                                        <p> {{ event.description }}</p>
+                                </div>
+                                <div class="center">
+                                        <a class="btn-floating btn-medium waves-effect waves-light red"><i
+                                                        class="material-icons">add</i></a>
+                                        <p>S'inscrire</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

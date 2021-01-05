@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BoardgameApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="https://unpkg.com/core-js@2.5.4/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('main.js').catch(function (err) { console.error(err) });
+  </script>
+
+   <!--Import materialize.css-->
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<div id="background-body">   
+  <boardgame-app></boardgame-app>
+</div>
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</body>
+
+</html>

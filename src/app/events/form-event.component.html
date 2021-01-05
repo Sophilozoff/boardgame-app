@@ -1,0 +1,51 @@
+<form class="card-panel">    
+    <h4>Créer un nouvel évènement</h4>
+    <br>
+    <!-- Event title -->
+    <div class="input-field col s6">
+        <input placeholder="Titre" #title type="text">
+    </div>
+
+    <!-- Event date and hour -->
+    <div>
+        <input type="text" class="dategamepicker" placeholder="Date" #date>
+        <input type="text" class="timepicker" placeholder="Heure" #hour>
+    </div>
+
+    <!-- Event location -->
+    <div class="input-field col s12">
+        <select class="form-control" #place>
+            <option value="" disabled selected>Lieu</option>
+            <option value="A la maison">A la maison</option>
+            <option value="Le nid">Le nid</option>
+            <option value="La revanche">La revanche</option>
+            <option value="Café Meisia">Café Meisia</option>
+        </select>
+    </div>
+
+    <!-- Event max players -->
+    <div class="input-field col s12">
+        <select class="form-control" #nbMaxOfPlayers >
+            <option value="" disabled selected>Nombre de participants</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+    </div>
+
+    <!-- Event description -->
+    <div class="input-field col s12">
+        <label>Description :</label>
+        <textarea #description class="materialize-textarea"></textarea>
+    </div>
+    
+    <button (click)="add(title.value, place.value, date.value, hour.value, description.value, nbMaxOfPlayers.value)" 
+                    class="btn waves-effect waves-light">Créer un nouvel évènement
+        <i class="material-icons right">send</i>
+    </button>
+</form>
