@@ -4,7 +4,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Observable, Subject, of } from 'rxjs';
 
 import { BoardgamesService } from './boardgames.service';
-import { Boardgame } from './boardgame';
+import { Boardgame } from '../_models/boardgame';
 
 @Component({
     selector: 'search-boardgame',

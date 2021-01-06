@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Event } from './event';
+import { Event } from '../_models/event';
 import { EventsService } from './events.service';
 import {NgForm} from '@angular/forms';
 

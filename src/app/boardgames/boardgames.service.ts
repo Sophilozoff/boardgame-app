@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Boardgame } from './boardgame';
+import { Boardgame } from '../_models/boardgame';
 
 const httpOptions = {
     headers: new HttpHeaders({

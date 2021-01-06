@@ -1,6 +1,6 @@
 import { Component,  OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
-import { Event } from './event';
+import { Event } from '../_models/event';
 import { EventsService } from './events.service';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';

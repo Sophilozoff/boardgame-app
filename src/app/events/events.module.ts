@@ -5,7 +5,7 @@ import { EventsRoutingModule } from './events-routing.module';
 import { HttpErrorHandler } from '../http-error-handler.service';
 import { MessageService } from '../message.service';
 import { EventsService } from './events.service';
-
+import { AuthGuard } from '../auth-guard.service';
 import { ListEventsComponent } from './list-events.component';
 import { FormEventComponent } from './form-event.component';
 import { DetailEventComponent } from './detail-event.component';
@@ -30,5 +30,6 @@ import { EditEventComponent } from './edit-event.component';
     EventsService, 
     HttpErrorHandler,
     MessageService,
+    AuthGuard
   ]})
 export class EventsModule { }
