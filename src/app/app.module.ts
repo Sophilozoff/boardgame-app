@@ -5,12 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoardgamesModule } from './boardgames/boardgames.module';
 import { EventsModule } from './events/events.module';
-import { PageNotFoundComponent } from './front/page-not-found.component';
-import { FrontPageComponent } from './front/front-page.component';
-import { NavbarComponent } from './front/navbar.component';
-import { FooterComponent } from './front/footer.component';
-import { LoginComponent } from './front/login.component';
-import { FrontModule } from './front/front.module';
+import { HomesModule } from './home/home.module';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { NavbarComponent } from './navbar.component';
+import { FooterComponent } from './footer.component';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
 import { FormsModule } from '@angular/forms';
@@ -20,10 +18,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    FrontPageComponent,
     NavbarComponent,
-    FooterComponent,
-    LoginComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     BoardgamesModule,
     FormsModule,
     EventsModule,
+    HomesModule,
     AppRoutingModule,
   ],
   providers: [

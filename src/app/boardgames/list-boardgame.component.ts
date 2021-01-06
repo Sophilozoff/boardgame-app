@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { Boardgame } from './boardgame';
 import { BoardgamesService } from './boardgames.service';
 
